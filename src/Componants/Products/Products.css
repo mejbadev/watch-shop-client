@@ -1,0 +1,10 @@
+.product-container {
+  border: 1px solid gainsboro;
+  padding: 10px;
+}
+
+.underline {
+  border: 2px solid gray;
+  width: 25%;
+  margin: 0 auto;
+}

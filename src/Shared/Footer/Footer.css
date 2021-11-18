@@ -1,0 +1,27 @@
+input {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid ghostwhite;
+  border-radius: 5px;
+}
+hr {
+  border: 1px solid paleturquoise;
+}
+
+p i {
+  color: white;
+}
+
+.footer-detail {
+  padding: 30px;
+}
+
+.emergency {
+  border: 1px solid white;
+  padding: 10px;
+  margin-right: 10px;
+}
+.home-visit {
+  border: 1px solid white;
+  padding: 10px;
+}

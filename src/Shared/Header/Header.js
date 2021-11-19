@@ -9,7 +9,7 @@ const Header = () => {
         <div className='header-section mb-2'>
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container >
-            <Navbar.Brand href="#home">Watch Shop</Navbar.Brand>
+            <Link to='/home' style={{textDecoration:'none'}}><Navbar.Brand >Watch Shop</Navbar.Brand></Link>
             <Nav className="m-2 d-flex justify-content-end">
             <Nav.Link as={Link} to="/home">Home</Nav.Link>
             <Nav.Link as={Link} to="/explore">Explore Products</Nav.Link>

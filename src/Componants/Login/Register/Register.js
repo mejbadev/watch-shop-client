@@ -8,7 +8,7 @@ const Register = () => {
     const [registerData, setRegisterData] = useState({});
     const location = useLocation();
     const history = useHistory();
-    const {user, loginUser, registerUser} = useAuth();
+    const {user, loginUser, registerUser, logOut} = useAuth();
     const getInput =(e)=>{
         const field = e.target.name;
         const value = e.target.value;

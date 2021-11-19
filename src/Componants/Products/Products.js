@@ -1,5 +1,6 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Product from '../Product/Product';
 import './Products.css';
@@ -30,7 +31,7 @@ const Products = () => {
             </div>
             <div >
             {
-                !isLoading ? <div>Loading ...</div> : <div className=' mt-3 mx-auto  row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1'>
+                !isLoading ? <div className="m-3">Loading ... <Spinner animation="border" variant="primary" /></div> : <div className=' mt-3 mx-auto  row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1'>
                     {
                         products.slice(0,6).map(product=> <Product key={product._id} product={product}></Product>)
                     }

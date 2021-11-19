@@ -32,7 +32,9 @@ const useFirebase = () => {
             const user = userCredential.user;
             console.log(location?.state?.from);
             const destination= location?.state?.from || '/home';
+            
             history.push(destination);
+           
         }).catch((error)=>{
             const errorCode = error.code;
             const errorMessage = error.message;

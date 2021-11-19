@@ -76,7 +76,7 @@ const AllOrders = () => {
                     <DashboardHeader></DashboardHeader>
                 </div>
                 <div className="container col-9">
-                   <h2> MY ORDER LIST</h2>
+                   <h2> ALL ORDERS LIST</h2>
                    <div className='row row-cols-lg-3 row-cols-md-2 row-cols-1'>
                    {
                        myOrder.map(order=><div className='col d-flex' key={order._id}>
@@ -84,6 +84,7 @@ const AllOrders = () => {
                      <div className="card-header"><h4 className='text-gray bold'>{order.productTitle}</h4></div>
                      <div className="card-body">
                          <h6 className="card-title text-primary">Name: {order.userName}</h6>
+                         <h6 className="card-title text-primary">Email: {order.email}</h6>
                          <h6 className="card-title text-primary">Price: {order.productPrice} TK</h6>
                          <h6 className="card-title text-info">Address: {order.address}</h6>
                          <h6 className="card-title text-info">Status: {order?.status}</h6>

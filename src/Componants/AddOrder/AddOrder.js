@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 import './AddOrder.css';
@@ -66,7 +67,7 @@ const AddOrder = () => {
             <h2>BOOKING YOUR ORDER</h2>
             <hr className= 'order-underline'/>
             {
-                !isLoading ? <div>Loading ...</div> : <div className='row row-cols-lg-2 row-cols-md-2 row-cols-1'>
+                !isLoading ? <div>Loading ... <Spinner animation="border" variant="primary" /></div> : <div className='row row-cols-lg-2 row-cols-md-2 row-cols-1'>
                <div className='gx-2 col mb-2' >
             <div className='product-container h-100 d-flex flex-column justify-content-between'>
             <div>

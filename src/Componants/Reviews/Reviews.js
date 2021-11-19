@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Spinner } from 'react-bootstrap';
 import Rating from 'react-rating';
 import './Reviews.css';
 
@@ -24,7 +24,7 @@ const Reviews = () => {
             <hr className='underline'/>
             <div >
             {
-                !isLoading ? <div>Loading ...</div> : <div className=' mt-3 mx-auto  row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1'>
+                !isLoading ? <div className='m-2'>Loading ...  <Spinner animation="border" variant="primary" /></div> : <div className=' mt-3 mx-auto  row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1'>
                     {
                         reviews.map(review=> <div className='gx-2 col mb-2' key={review._id}>
                             <div className='product-container h-100 d-flex flex-column justify-content-between'>

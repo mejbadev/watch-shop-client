@@ -1,6 +1,6 @@
 import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
-import { Nav } from 'react-bootstrap';
+import { Nav, Spinner } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 
@@ -29,22 +29,25 @@ const DashboardHeader = () => {
         <div>
             <Nav className="flex-column">
             {
-                !isLoading? <div className="text-white">
-                   loading ...
+                !isLoading? <div className="text-white m-3">
+                   loading ... <Spinner animation="border" variant="primary" />
                 </div> : <div>
                 {
-                         userCheck ? <div >
+                         userCheck ? <div className="mt-2 p-2">
+                         <h5 className='text-white'>{user.email}</h5>
                          <Nav.Link as={Link} to="/allOrders">Manage All Orders</Nav.Link>
                          <Nav.Link as={Link} to="/dashboard/addAProduct">Add A product</Nav.Link>
                          <Nav.Link as={Link} to="/dashboard/makeAdmin">Make Admin</Nav.Link>
                          <Nav.Link as={Link} to="/dashboard/allProducts">Manage All Products</Nav.Link>
                          <Nav.Link as={Link} to="/home"> <button onClick={logOut} className='btn btn-warning'>Logout</button> Admin</Nav.Link>
+                         
                         
-                 </div> : <div>
+                 </div> : <div className="mt-2 p-2">
+                         <h5 className="text-white">{user.email}</h5>
                          <Nav.Link as={Link} to="/dashboard/myOrder">My Order</Nav.Link>
                          <Nav.Link as={Link} to="/dashboard/review">Review</Nav.Link>
                          <Nav.Link as={Link} to="/dashboard/pay">Pay</Nav.Link>
-                         <Nav.Link as={Link} to="/home"> <button onClick={logOut} className='btn btn-warning'>Logout</button> user</Nav.Link>
+                         <Nav.Link as={Link} to="/home"> <button onClick={logOut} className='btn btn-warning'>Logout</button> User</Nav.Link>
                  </div>
                     }
                 </div>

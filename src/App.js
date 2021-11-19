@@ -17,6 +17,8 @@ import Pay from './Componants/Pay/Pay';
 import Payment from './Componants/Payment/Payment';
 import AllOrders from './Componants/AdminDashboard/AllOrders/AllOrders';
 import MakeAdmin from './Componants/AdminDashboard/MakeAdmin/MakeAdmin';
+import AllProducts from './Componants/AllProducts/AllProducts';
+import NF from './Componants/NF/NF';
 
 function App() {
   return (
@@ -41,6 +43,9 @@ function App() {
         <Route path='/dashboard/addAProduct'>
           <AddAProduct></AddAProduct>
         </Route> 
+        <Route path='/dashboard/allProducts'>
+          <AllProducts></AllProducts>
+        </Route> 
         <Route path='/dashboard/makeAdmin'>
           <MakeAdmin></MakeAdmin>
         </Route>
@@ -62,12 +67,15 @@ function App() {
         <Route path='/payment'>
           <Pay></Pay>          
         </Route>
-      <Route path='/'>
+      <Route exact path='/'>
           <Home></Home>
         </Route>
      
         <Route path='/home'>
           <Home></Home>
+        </Route>
+        <Route path='/*'>
+            <NF></NF>
         </Route>
       </Switch>
       <Footer></Footer>

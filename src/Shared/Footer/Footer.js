@@ -4,8 +4,8 @@ import './Footer.css';
 const Footer = () => {
     return (
         <div className='footer bg-dark pb-3 mt-3'>
-            <div className='d-flex justify-content-around footer-detail'>
-                <div className='first-part'>
+            <div className=' footer-detail row'>
+                <div className='first-part col-lg-7 col-12'>
                     <h5 className='text-white text-start'>Get in Touch</h5>
                     <h3 className='text-white text-start'>Contact us now</h3>
                     <hr />
@@ -23,8 +23,8 @@ const Footer = () => {
                     </div>
 
                 </div>
-                <div>
-                    <h5 className='text-center text-white'>Subscribe Us
+                <div className="col-lg-5 col-12">
+                    <h5 className='text-center text-white '>Subscribe Us
                     </h5>
                     <input type="text" name='Email' placeholder='Enter your email' /> <br />
                     <button className='btn btn-light text-primary mt-2 p-2'  type="submit">Subcribe</button>

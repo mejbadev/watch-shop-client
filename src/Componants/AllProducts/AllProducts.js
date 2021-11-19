@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 import DashboardHeader from '../Dashboard/DashboardHeader/DashboardHeader';
 
@@ -46,7 +47,7 @@ const AllProducts = () => {
                 </div>
                 <div className="container col-9">
                    <h2> Products List</h2>
-                   <div className='row row-cols-lg-3 row-cols-md-2 row-cols-1'>
+                  <div className='row row-cols-lg-3 row-cols-md-2 row-cols-1'>
                    {
                        products.map(product=><div className='col d-flex' key={product._id}>
                         <div style={{width: '100%', border:'1px solid blue'}} className="card mb-3" >
@@ -61,6 +62,8 @@ const AllProducts = () => {
                        </div>)
                    }
                    </div>
+                   
+                  
                   
                 </div>
             </div>

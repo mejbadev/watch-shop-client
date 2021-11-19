@@ -11,7 +11,7 @@ Full website is created using HTML, CSS, Bootstrap , FontAwesome, Vanila Css, Re
 Home page will show the nav bar (home, explore products, login). And home page  shows banner, watch collection ,it has a button name buy now user can buy it by clicking it. If he/she is not logged in then he has to login first and the page redirect the order page. If a user is looged in(a button logout is shown in navbar) she/he can buy any product, can see his/her dashboard (My order, pay and review). if he is in logged in as admin dashbord show(Manage all order, manage all product, make admin, add a product). 
 
 for using first as admin: admin@admin.com password: 123456
-you can resgister user and make some of them as admin. 
+user can resgister them as user and admin make some of them  admin. 
 
 
 # Used React libraries
